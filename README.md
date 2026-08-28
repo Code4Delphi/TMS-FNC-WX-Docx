@@ -15,6 +15,8 @@ Exemplo prático de geração de documentos do Word no formato `.DOCX` utilizand
 ## Vídeos de demonstração
 - [Word com Delphi: geração de arquivos .DOCX | TMSFNCWXDocx | #026](https://youtube.com/shorts/gSsV06v9Tn0?feature=share)
 
+<img width="540" height="960" alt="Short-026-TMSFNCWXDocx" src="https://github.com/user-attachments/assets/89466400-50d0-4fc5-aa14-21bdefa19043" />
+
 <br>
 
 ## 📞 Contatos
