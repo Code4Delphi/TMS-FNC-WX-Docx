@@ -50,15 +50,11 @@ implementation
 {$R *.dfm}
 
 procedure TViewMain.btnGenerateDocxTestClick(Sender: TObject);
-var
-  LSection: TTMSFNCWXDocxSection;
-  LParagraph:  TTMSFNCWXDocxParagraph;
-  LText: TTMSFNCWXDocxText;
 begin
   TMSFNCWXDocx1.Document.Sections.Clear;
-  LSection := TMSFNCWXDocx1.Document.AddSection;
-  LParagraph := LSection.AddParagraph;
-  LText := LParagraph.AddText('World com Delphi');
+  var LSection := TMSFNCWXDocx1.Document.AddSection;
+  var LParagraph := LSection.AddParagraph;
+  var LText := LParagraph.AddText('World com Delphi');
   LText.Font.Color := clRed;
 
   TMSFNCWXDocx1.GetDocxAsFile('Doc-Teste.docx');
@@ -157,11 +153,11 @@ begin
   var LRow := LTable.AddRow;
   LRow.TableHeader := True;
   AddTableCell(LRow, 'Recurso', True);
-  AddTableCell(LRow, 'Exemplo', True);
+  AddTableCell(LRow, 'Disponíveis', True);
   AddTableCell(LRow, 'Status', True);
 
   LRow := LTable.AddRow;
-  AddTableCell(LRow, 'Formatacao', False);
+  AddTableCell(LRow, 'Formatação', False);
   AddTableCell(LRow, 'Negrito, italico, cores e destaque', False);
   AddTableCell(LRow, 'Incluido', False);
 
@@ -185,7 +181,7 @@ begin
     try
       LBitmap.LoadFromFile(C_IMAGE_PATH);
       LParagraph := LSection.AddParagraph;
-      LParagraph.Alignment := taCenter;
+      LParagraph.Alignment := taLeft;
       LParagraph.AddImage(LBitmap, 128, 128);
     finally
       LBitmap.Free;
